@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'elasticapm.contrib.django',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +40,23 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+ELASTIC_APM = {
+  # Set the required service name. Allowed characters:
+  # a-z, A-Z, 0-9, -, _, and space
+  'SERVICE_NAME': '',
+
+  # Use if APM Server requires a secret token
+  'SECRET_TOKEN': '',
+
+  # Set the custom APM Server URL (default: http://localhost:8200)
+  'SERVER_URL': '',
+
+  # Set the service environment
+  'ENVIRONMENT': 'production',
+}
+
 MIDDLEWARE = [
+    'elasticapm.contrib.django.middleware.TracingMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
