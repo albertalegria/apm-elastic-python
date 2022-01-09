@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apm_app',
 ]
 
 ELASTIC_APM = {
@@ -52,7 +53,7 @@ ELASTIC_APM = {
   'SERVER_URL': 'http://localhost:8200',
 
   # Set the service environment
-  'ENVIRONMENT': 'production',
+  'ENVIRONMENT': 'dev', #'production',
 }
 
 MIDDLEWARE = [
