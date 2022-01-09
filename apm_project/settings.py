@@ -43,13 +43,13 @@ INSTALLED_APPS = [
 ELASTIC_APM = {
   # Set the required service name. Allowed characters:
   # a-z, A-Z, 0-9, -, _, and space
-  'SERVICE_NAME': '',
+  'SERVICE_NAME': 'apm-elastic-django-service_name',
 
   # Use if APM Server requires a secret token
   'SECRET_TOKEN': '',
 
   # Set the custom APM Server URL (default: http://localhost:8200)
-  'SERVER_URL': '',
+  'SERVER_URL': 'http://localhost:8200',
 
   # Set the service environment
   'ENVIRONMENT': 'production',
