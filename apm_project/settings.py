@@ -57,6 +57,7 @@ ELASTIC_APM = {
 }
 
 MIDDLEWARE = [
+    'elasticapm.contrib.django.middleware.Catch404Middleware',
     'elasticapm.contrib.django.middleware.TracingMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
